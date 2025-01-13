@@ -51,7 +51,7 @@ fn main() {
         }
 
         println!("cargo::rustc-link-arg=/FORCE:MULTIPLE");
-        cmake.profile("Release").cxxflag("/EHsc").static_crt(true);
+        cmake.profile("Release").cxxflag("/EHsc").static_crt(false);
     }
 
     if cfg!(feature = "cuda") {
