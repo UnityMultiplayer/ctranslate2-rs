@@ -31,7 +31,7 @@ description = "Rust bindings for OpenNMT/CTranslate2"
 
 [dependencies]
 anyhow = "1.0.95"
-cxx = { version = "1.0.136", features = ["c++17"] }
+cxx = { git = "https://github.com/UnityMultiplayer/cxx.git", features = ["c++17"] }
 tokenizers = "0.21.0"
 
 # Dependencies for Whisper model
