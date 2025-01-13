@@ -41,7 +41,7 @@ fn main() {
     let mut cmake = Config::new("CTranslate2");
     cmake
         .define("BUILD_CLI", "OFF")
-        .define("BUILD_SHARED_LIBS", "OFF")
+        .define("BUILD_SHARED_LIBS", "ON")
         .define("WITH_MKL", "OFF")
         .define("OPENMP_RUNTIME", "NONE");
     if cfg!(target_os = "windows") {
