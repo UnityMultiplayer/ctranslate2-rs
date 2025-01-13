@@ -94,4 +94,3 @@
 pub mod auto;
 pub mod bpe;
 pub mod hf;
-pub mod sentencepiece;
