@@ -42,7 +42,7 @@ use std::path::Path;
 
 use anyhow::{bail, Result};
 
-use super::{bpe, hf, sentencepiece};
+use super::{bpe, hf};
 
 /// A tokenizer that automatically determines the appropriate tokenizer.
 pub struct Tokenizer {
@@ -54,8 +54,6 @@ impl Tokenizer {
     pub fn new<T: AsRef<Path>>(path: T) -> Result<Self> {
         Ok(Self {
             tokenizer: if let Ok(t) = hf::Tokenizer::new(&path) {
-                Box::new(t)
-            } else if let Ok(t) = sentencepiece::Tokenizer::new(&path) {
                 Box::new(t)
             } else if let Ok(t) = bpe::new(&path, None) {
                 Box::new(t)
