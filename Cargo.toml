@@ -58,7 +58,7 @@ hound = { version = "3.5.1" }
 
 [build-dependencies]
 cmake = "0.1.52"
-cxx-build = "1.0.136"
+cxx-build = { git = "https://github.com/UnityMultiplayer/cxx.git" }
 walkdir = "2.5.0"
 
 [features]
